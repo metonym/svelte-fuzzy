@@ -13,25 +13,23 @@ yarn add svelte-fuzzy
 ## Usage
 
 ```js
-<Fuzzy
+<script>
+  import SvelteFuzzy from 'svelte-fuzzy';
+</script>
+
+<SvelteFuzzy
   query='old'
-  data={[
-    { title: "Old Man's War" },
-    { title: 'The Lock Artist' },
-    { title: 'HTML5' }
-  ]}
+  data={[{ title: "Old Man's War" }, { title: 'The Lock Artist' }, { title: 'HTML5' }]}
   options={{ keys: ['title'] }}
   let:results>
   {#each results as { title }}
-    {#if Array.isArray(title)}
-      {#each title as { text, matches }}
-        {#if matches}
-          <mark>{text}</mark>
-        {:else}{text}{/if}
-      {/each}
-    {/if}
+    {#each title as { text, matches }}
+      {#if matches}
+        <mark>{text}</mark>
+      {:else}{text}{/if}
+    {/each}
   {/each}
-</Fuzzy>
+</SvelteFuzzy>
 ```
 
 ## [Changelog](CHANGELOG.md)
