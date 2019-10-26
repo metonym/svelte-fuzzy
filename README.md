@@ -12,7 +12,7 @@ yarn add svelte-fuzzy
 
 ## Usage
 
-```js
+```html
 <script>
   import SvelteFuzzy from 'svelte-fuzzy';
 </script>
