@@ -1,6 +1,6 @@
 {
   "name": "svelte-fuzzy",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "license": "MIT",
   "description": "Lightweight Svelte fuzzy search highlighting using fuse.js",
   "author": "Eric Liu (https://github.com/metonym)",
@@ -12,7 +12,8 @@
     "build": "node scripts/build.js",
     "lint": "tslint --fix -p .",
     "test": "jest --coverage",
-    "test:tdd": "jest --watch"
+    "test:tdd": "jest --watch",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "format-fuse.js": "^1.0.0",
