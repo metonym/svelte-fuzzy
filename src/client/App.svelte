@@ -10,8 +10,15 @@
 
 <input bind:value={query} />
 
-<Fuzzy {query} {data} options={{ keys: ['title'] }} let:results>
-  {#each results as { title }}
+<button
+  on:click={() => {
+    data = [...data, { title: 'Boulder' }];
+  }}>
+  Update data
+</button>
+
+<Fuzzy {query} {data} options={{ keys: ['title'] }} let:result>
+  {#each result as { title }}
     {#each title as { text, matches }}
       {#if matches}
         <mark>{text}</mark>

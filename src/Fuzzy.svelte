@@ -8,7 +8,7 @@
   options.shouldSort = true;
   options.includeMatches = true;
 
-  let fuseResults = [];
+  let results = [];
   const fuse = new Fuse(data, options);
 
   $: if (data) {
@@ -16,10 +16,10 @@
   }
 
   $: if (query || data) {
-    fuseResults = fuse.search(query);
+    results = fuse.search(query);
   }
 
-  $: results = format(fuseResults);
+  $: result = format(results);
 </script>
 
-<slot {results} />
+<slot {result} results={result} />
