@@ -1,5 +1,6 @@
 <script>
   import Fuzzy from '../Fuzzy.svelte';
+
   let query = 'old';
   let data = [
     { title: "Old Man's War" },

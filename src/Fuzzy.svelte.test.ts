@@ -4,20 +4,22 @@ import { render } from '@testing-library/svelte';
 import SvelteFuzzy from './Fuzzy.svelte';
 
 it('returns the correct result', () => {
-  const result = render(SvelteFuzzy, {
+  const data = [
+    { title: "Old Man's War" },
+    { title: 'The Lock Artist' },
+    { title: 'HTML5' }
+  ];
+  const options = { keys: ['title'] };
+
+  const { container, component, rerender } = render(SvelteFuzzy, {
     props: {
       query: 'old',
-      data: [
-        { title: "Old Man's War" },
-        { title: 'The Lock Artist' },
-        { title: 'HTML5' }
-      ],
-      options: { keys: ['title'] }
+      data,
+      options
     }
   });
 
-  // tslint:disable-next-line: no-string-literal
-  expect(result.component['$$'].ctx.result).toEqual([
+  expect(component.$$.ctx.result).toEqual([
     {
       title: [
         { matches: true, text: 'Old' },
@@ -25,4 +27,7 @@ it('returns the correct result', () => {
       ]
     }
   ]);
+
+  rerender({ props: { query: '' } });
+  expect(container.firstChild).toHaveTextContent('');
 });
