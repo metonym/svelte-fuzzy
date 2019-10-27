@@ -1,5 +1,5 @@
 <script>
-  import Fuse from 'fuse.js';
+  import * as Fuse from 'fuse.js';
   import format from 'format-fuse.js';
   export let query = '';
   export let data = [];

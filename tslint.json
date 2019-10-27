@@ -1,4 +1,10 @@
 {
   "extends": ["tslint:latest", "tslint-config-prettier"],
-  "rules": { "object-literal-sort-keys": false }
+  "rules": {
+    "no-implicit-dependencies": [
+      true,
+      ["@testing-library/jest-dom/extend-expect", "@testing-library/svelte"]
+    ],
+    "object-literal-sort-keys": false
+  }
 }
