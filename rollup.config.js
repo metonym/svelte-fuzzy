@@ -22,6 +22,6 @@ export default ['es', 'umd'].map(format => {
     input: pkg.svelte,
     output,
     external: Object.keys(pkg.dependencies),
-    plugins: [svelte(), resolve(), commonjs(), typescript(), terser()]
+    plugins: [svelte(), resolve(), commonjs(), typescript(), UMD && terser()]
   };
 });
