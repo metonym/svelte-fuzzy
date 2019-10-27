@@ -2996,10 +2996,11 @@ has@^1.0.0, has@^1.0.1, has@^1.0.3:
     function-bind "^1.1.1"
 
 hash-static@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/hash-static/-/hash-static-0.1.1.tgz#807af625f8956dc6ed5c918c439adabbb7d3a878"
-  integrity sha512-XOjS01G2DDr7kaV1O91DzwiXw4y88u7w0NwJylTSrRA7lr9H83KnVPyU0Skxyk4m7plj/j4kStZnFR5Ux6x5bw==
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/hash-static/-/hash-static-0.1.2.tgz#be9c79fb7ed0a8e9cb4195ca545946e7c7a077d1"
+  integrity sha512-Ls0cwS71AYEIXsp1RvZfz3d9BszY5bU8QqAnoIIAiYYvUzpgajUmSK2unTyiM1SeBzBESImUroxGedSZ5PHWMQ==
   dependencies:
+    chalk "^2.4.2"
     htmlnano "^0.2.4"
     posthtml "^0.12.0"
     posthtml-hash "^0.2.1"
