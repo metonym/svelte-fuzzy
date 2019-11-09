@@ -106,7 +106,8 @@
     "text highlighting"
   ],
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "bugs": "https://github.com/metonym/svelte-fuzzy/issues"
 }
