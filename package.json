@@ -10,7 +10,6 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "lint": "tslint --fix -p .",
     "test": "jest --coverage",
     "test:tdd": "jest --watch",
     "prepublishOnly": "yarn build"
@@ -35,6 +34,7 @@
     "husky": "^3.0.9",
     "jest": "^24.9.0",
     "jest-transform-svelte": "^2.1.0",
+    "lint-staged": "^9.5.0",
     "prettier": "^1.18.2",
     "pretty-quick": "^2.0.0",
     "rollup": "^1.25.2",
@@ -56,9 +56,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && pretty-quick --staged",
+      "pre-commit": "lint-staged && pretty-quick --staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "tslint --fix -p .",
+      "git add"
+    ]
   },
   "prettier": {
     "tabWidth": 2,
