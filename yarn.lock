@@ -2785,9 +2785,9 @@ form-data@~2.3.2:
     mime-types "^2.1.12"
 
 format-fuse.js@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/format-fuse.js/-/format-fuse.js-1.0.0.tgz#82fccdf418bfdde4938ea18f9edfcd6418c06aed"
-  integrity sha512-a1d61f3T8UdFENtKZt1hPSdvhN7WJeQMssPw5umDpQ28GZ+OuI62imRRV6Xszk6S57vGks6kVB4bB/xLBcc9ow==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/format-fuse.js/-/format-fuse.js-1.0.1.tgz#4f279d5d6d1445379ed16a1cc8d3f85f5e191793"
+  integrity sha512-pC013a1oac7hm/eS1CUyaamGVVuIiLDZSoRNk+FHo/zRQHoqhUoU3VM3/IBwKt8uBf2UWyZFMZ1IujT8PWbcVQ==
   dependencies:
     set-value "^3.0.1"
     strind "^0.3.1"
