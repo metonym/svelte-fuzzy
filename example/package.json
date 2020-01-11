@@ -9,12 +9,13 @@
   "browserslist": [
     "last 1 chrome versions"
   ],
-  "dependencies": {
-    "svelte-fuzzy": "^0.2.1"
-  },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-svelte": "^4.0.4",
-    "svelte": "^3.12.1"
+    "parcel-plugin-svelte": "^4.0.5",
+    "svelte": "^3.16.7",
+    "svelte-fuzzy": "^0.2.1"
+  },
+  "resolutions": {
+    "**/serialize-to-js": ">=3.0.1"
   }
 }

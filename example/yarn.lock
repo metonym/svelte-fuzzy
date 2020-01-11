@@ -3578,10 +3578,10 @@ parcel-bundler@^1.12.4:
     v8-compile-cache "^2.0.0"
     ws "^5.1.1"
 
-parcel-plugin-svelte@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/parcel-plugin-svelte/-/parcel-plugin-svelte-4.0.4.tgz#2c50ff98565bc68b4174a9d7030fe23951cc3ad4"
-  integrity sha512-Dgmlw+ULrKw+kxe8ClniuClE55tlW8cFlLRSSJFOgxgWoH7280RG8Rs7GSp90kihliatn+fH2xpj2hYaWqgLPA==
+parcel-plugin-svelte@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/parcel-plugin-svelte/-/parcel-plugin-svelte-4.0.5.tgz#fdf0fb498b325120debfa5208c88285057c6a799"
+  integrity sha512-9KUYOEKL6LqQmOYc4DeErvqOHlx5RTUDHHUxesox0xQi7diA3pi/SEMr/37HWj5hxB+iiTBCvOw9sR60xdBcTA==
   dependencies:
     svelte-dev-helper "^1.1.7"
 
@@ -4434,10 +4434,10 @@ send@0.17.1:
     range-parser "~1.2.1"
     statuses "~1.5.0"
 
-serialize-to-js@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/serialize-to-js/-/serialize-to-js-3.0.0.tgz#1fd8736744819a4df29dc85e9d04a44a4984edc3"
-  integrity sha512-WdGgi0jGnWCQXph2p3vkxceDnTfvfyXfYxherQMRcZjSaJzMQdMBAW6i0nojsBKIZ3fFOztZKKVbbm05VbIdRA==
+serialize-to-js@>=3.0.1, serialize-to-js@^3.0.0:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/serialize-to-js/-/serialize-to-js-3.0.2.tgz#d71834a18135aff742e516d3b2208f662a46a8ac"
+  integrity sha512-o5FqeMyxGx1wkp8p14q9QqGXh1JjXtIDYTr15N/B4ThM5ULqlpXdtOO84m950jFGvBkeRD1utW+WyNKvao2ybQ==
 
 serve-static@^1.12.4:
   version "1.14.1"
@@ -4797,10 +4797,10 @@ svelte-fuzzy@^0.2.1:
     format-fuse.js "^1.0.0"
     fuse.js "^3.4.5"
 
-svelte@^3.12.1:
-  version "3.12.1"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.12.1.tgz#ddfacd43272ac3255907c682b74ee7d3d8b06b0c"
-  integrity sha512-t29WJNjHIqfrdMcVXqIyRfgLEaNz7MihKXTpb8qHlbzvf0WyOOIhIlwIGvl6ahJ9+9CLJwz0sjhFNAmPgo8BHg==
+svelte@^3.16.7:
+  version "3.16.7"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.16.7.tgz#9ade80a4bbbac95595c676dd817222f632fa2c07"
+  integrity sha512-egrva1UklB1n7KAv179IhDpQzMGAvubJUlOQ9PitmmZmAfrCUEgrQnx2vPxn2s+mGV3aYegXvJ/yQ35N2SfnYQ==
 
 svgo@^1.0.0, svgo@^1.2.2:
   version "1.3.0"
