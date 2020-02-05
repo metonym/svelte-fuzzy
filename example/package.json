@@ -14,8 +14,5 @@
     "parcel-plugin-svelte": "^4.0.5",
     "svelte": "^3.16.7",
     "svelte-fuzzy": "^0.2.1"
-  },
-  "resolutions": {
-    "**/serialize-to-js": ">=3.0.1"
   }
 }
