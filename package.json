@@ -16,7 +16,7 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "format-fuse.js": "^1.0.0",
+    "format-fuse.js": "^1.0.2",
     "fuse.js": "^3.4.5"
   },
   "devDependencies": {
