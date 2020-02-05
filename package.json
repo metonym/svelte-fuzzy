@@ -30,6 +30,7 @@
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "core-js": "^3.3.4",
+    "gh-pages": "^2.2.0",
     "hash-static": "^0.1.1",
     "husky": "^4.0.7",
     "jest": "^24.9.0",
