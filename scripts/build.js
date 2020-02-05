@@ -9,4 +9,3 @@ shx.exec('hash-static "dist/index.html"');
 
 shx.cd('example');
 shx.exec('yarn build --public-url .');
-shx.mv('dist', '../docs');
