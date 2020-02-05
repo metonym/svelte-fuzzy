@@ -16,10 +16,10 @@ yarn add svelte-fuzzy
 
 ```html
 <script>
-  import SvelteFuzzy from 'svelte-fuzzy';
+  import Fuzzy from 'svelte-fuzzy';
 </script>
 
-<SvelteFuzzy
+<Fuzzy
   query='old'
   data={[{ title: "Old Man's War" }, { title: 'The Lock Artist' }, { title: 'HTML5' }]}
   options={{ keys: ['title'] }}
@@ -31,8 +31,10 @@ yarn add svelte-fuzzy
       {:else}{text}{/if}
     {/each}
   {/each}
-</SvelteFuzzy>
+</Fuzzy>
 ```
+
+## [Examples](examples)
 
 ## [Changelog](CHANGELOG.md)
 
