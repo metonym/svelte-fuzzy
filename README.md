@@ -30,9 +30,15 @@ yarn add svelte-fuzzy
 </script>
 
 <Fuzzy {query} {data} {options} let:result>
-  {#each result as { title }} {#each title as { text, matches }} {#if matches}
-  <mark>{text}</mark>
-  {:else} {text} {/if} {/each} {/each}
+  {#each result as { title }}
+    {#each title as { text, matches }}
+      {#if matches}
+        <mark>{text}</mark>
+      {:else}
+        {text}
+      {/if}
+    {/each}
+  {/each}
 </Fuzzy>
 ```
 
