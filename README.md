@@ -6,6 +6,8 @@
 
 > Lightweight Svelte fuzzy search highlighting using [fuse.js](https://github.com/krisk/Fuse).
 
+This component allows for easier fuzzy text match highlighting.
+
 ## Install
 
 ```bash
@@ -17,20 +19,20 @@ yarn add svelte-fuzzy
 ```html
 <script>
   import Fuzzy from 'svelte-fuzzy';
+
+  const query = 'old';
+  const data = [
+    { title: "Old Man's War" },
+    { title: 'The Lock Artist' },
+    { title: 'HTML5' }
+  ];
+  const options = { keys: ['title'] };
 </script>
 
-<Fuzzy
-  query='old'
-  data={[{ title: "Old Man's War" }, { title: 'The Lock Artist' }, { title: 'HTML5' }]}
-  options={{ keys: ['title'] }}
-  let:result>
-  {#each result as { title }}
-    {#each title as { text, matches }}
-      {#if matches}
-        <mark>{text}</mark>
-      {:else}{text}{/if}
-    {/each}
-  {/each}
+<Fuzzy {query} {data} {options} let:result>
+  {#each result as { title }} {#each title as { text, matches }} {#if matches}
+  <mark>{text}</mark>
+  {:else} {text} {/if} {/each} {/each}
 </Fuzzy>
 ```
 
