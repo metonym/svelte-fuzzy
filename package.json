@@ -8,7 +8,7 @@
   "module": "lib/index.mjs",
   "main": "lib/index.js",
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "rollup -c rollup.client.config.js -w",
     "build": "node scripts/build.js",
     "deploy": "node gh-pages.js",
     "test": "jest --coverage",
