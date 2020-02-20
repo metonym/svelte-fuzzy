@@ -9,7 +9,8 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "rollup -c rollup.client.config.js -w",
-    "build": "node scripts/build.js",
+    "build": "rm -rf dist && rollup -c && rollup -c rollup.client.config.js",
+    "postbuild": "hash-static 'dist/index.html'",
     "deploy": "node gh-pages.js",
     "test": "jest --coverage",
     "test:tdd": "jest --watch",
