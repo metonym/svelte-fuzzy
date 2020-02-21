@@ -1,6 +1,7 @@
 <script>
   let className = 'svelte-fuzzy';
   export { className as class };
+  export let style = undefined;
   export let query = '';
   export let data = [];
   export let options = {};
@@ -40,7 +41,13 @@
 
 <slot results={result} {result} {formatted}>
   {#each formatted as item}
-    <div class={className}>
+    <div
+      on:click
+      on:mouseover
+      on:mouseenter
+      on:mouseleave
+      class={className}
+      {style}>
       {#each item as field}
         <span class="svelte-fuzzy-field">
           {#each field as { key, text, matches }}
