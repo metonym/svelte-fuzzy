@@ -20,26 +20,25 @@ yarn add svelte-fuzzy
 <script>
   import Fuzzy from 'svelte-fuzzy';
 
-  const query = 'old';
-  const data = [
-    { title: "Old Man's War" },
-    { title: 'The Lock Artist' },
-    { title: 'HTML5' }
+  let query = 'old';
+  let data = [
+    {
+      title: "Old Man's War",
+      author: 'John'
+    },
+    {
+      title: 'The Lock Artist',
+      author: 'Steve'
+    },
+    {
+      title: 'Remy',
+      author: 'Remy'
+    }
   ];
-  const options = { keys: ['title'] };
+  let options = { keys: ['title', 'author'] };
 </script>
 
-<Fuzzy {query} {data} {options} let:result>
-  {#each result as { title }}
-    {#each title as { text, matches }}
-      {#if matches}
-        <mark>{text}</mark>
-      {:else}
-        {text}
-      {/if}
-    {/each}
-  {/each}
-</Fuzzy>
+<Fuzzy {query} {data} {options} />
 ```
 
 ## [Examples](examples)
