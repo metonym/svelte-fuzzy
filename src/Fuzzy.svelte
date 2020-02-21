@@ -33,12 +33,6 @@
   }
 </script>
 
-<style>
-  .svelte-fuzzy-field {
-    display: block;
-  }
-</style>
-
 <slot results={result} {result} {formatted}>
   {#each formatted as item}
     <div
@@ -49,7 +43,7 @@
       class={className}
       {style}>
       {#each item as field}
-        <span class="svelte-fuzzy-field">
+        <div class="svelte-fuzzy-field">
           {#each field as { key, text, matches }}
             <span class={`svelte-fuzzy-${key}`}>
               {#if matches}
@@ -57,7 +51,7 @@
               {:else}{text}{/if}
             </span>
           {/each}
-        </span>
+        </div>
       {/each}
     </div>
   {/each}
