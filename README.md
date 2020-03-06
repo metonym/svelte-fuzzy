@@ -2,7 +2,6 @@
 
 [![NPM][npm]][npm-url]
 [![Build][build]][build-badge]
-[![Coverage][codecov-shield]][codecov]
 
 > Lightweight Svelte fuzzy search highlighting using [fuse.js](https://github.com/krisk/Fuse).
 
@@ -21,25 +20,29 @@ yarn add svelte-fuzzy
   import Fuzzy from 'svelte-fuzzy';
 
   let query = 'old';
-  let data = [
-    {
-      title: "Old Man's War",
-      author: 'John'
-    },
-    {
-      title: 'The Lock Artist',
-      author: 'Steve'
-    },
-    {
-      title: 'Remy',
-      author: 'Remy'
-    }
+
+  const data = [
+    { title: "Old Man's War", author: 'John' },
+    { title: 'The Lock Artist', author: 'Steve' },
+    { title: 'Remy', author: 'Remy' }
   ];
-  let options = { keys: ['title', 'author'] };
+
+  const options = { keys: ['title', 'author'] };
 </script>
 
 <Fuzzy {query} {data} {options} />
 ```
+
+## API
+
+| Prop name | Value                                |
+| --------- | ------------------------------------ |
+| query     | `string` (default: `""`)             |
+| data      | `Array` (default: `[]`)              |
+| options   | `object` (default: `{}`)             |
+| focusable | `boolean` (default: `false`)         |
+| class     | `string` (default: `"svelte-fuzzy"`) |
+| style     | `string` (default: `undefined`)      |
 
 ## [Examples](examples)
 
