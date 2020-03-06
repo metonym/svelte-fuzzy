@@ -19,6 +19,6 @@
   let options = { keys: ['title', 'author'] };
 </script>
 
-<input bind:value={query} />
+<input type="text" bind:value={query} />
 
 <Fuzzy {query} {data} {options} />
