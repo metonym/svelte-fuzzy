@@ -16,7 +16,7 @@ test('query "old"', () => {
   });
 
   expect(container.innerHTML).toMatchSnapshot();
-  expect(component.$$.ctx.result).toEqual([
+  expect(component.$$.ctx[2]).toEqual([
     {
       author: 'John',
       title: [
@@ -25,7 +25,7 @@ test('query "old"', () => {
       ]
     }
   ]);
-  expect(component.$$.ctx.formatted).toEqual([
+  expect(component.$$.ctx[3]).toEqual([
     [
       [
         { key: 'title', matches: true, text: 'Old' },
@@ -42,13 +42,13 @@ test('query "remy"', () => {
   });
 
   expect(container.innerHTML).toMatchSnapshot();
-  expect(component.$$.ctx.result).toEqual([
+  expect(component.$$.ctx[2]).toEqual([
     {
       author: [{ matches: true, text: 'Remy' }],
       title: [{ matches: true, text: 'Remy' }]
     }
   ]);
-  expect(component.$$.ctx.formatted).toEqual([
+  expect(component.$$.ctx[3]).toEqual([
     [
       [{ key: 'title', matches: true, text: 'Remy' }],
       [{ key: 'author', matches: true, text: 'Remy' }]
