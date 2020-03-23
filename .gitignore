@@ -1,7 +1,9 @@
 /coverage
 /dist
 /lib
-/node_modules
+/**/node_modules
+/**/.cache
+/**/dist
 .DS_Store
 yarn-debug.log*
 yarn-error.log*
