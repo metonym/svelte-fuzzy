@@ -3,48 +3,49 @@
 [![NPM][npm]][npm-url]
 [![Build][build]][build-badge]
 
-> Lightweight Svelte fuzzy search highlighting using [fuse.js](https://github.com/krisk/Fuse).
-
-This component allows for easier fuzzy text match highlighting.
+> [Fuse.js](https://github.com/krisk/Fuse) binding for Svelte for fuzzy text syntax highlighting.
 
 ## Install
 
 ```bash
-yarn add svelte-fuzzy
+yarn add -D svelte-fuzzy
+# OR
+npm i -D svelte-fuzzy
 ```
 
 ## Usage
 
-```html
+```svelte
 <script>
-  import Fuzzy from 'svelte-fuzzy';
+  import Fuzzy from "svelte-fuzzy";
 
-  let query = 'old';
+  let query = "old";
 
-  const data = [
-    { title: "Old Man's War", author: 'John' },
-    { title: 'The Lock Artist', author: 'Steve' },
-    { title: 'Remy', author: 'Remy' }
+  // Fuse.js options
+  let options = { keys: ["title"] };
+
+  // Fuse.js data
+  let data = [
+    { title: "Old Man's War", author: "John" },
+    { title: "The Lock Artist", author: "Steve" },
+    { title: "Remy", author: "Remy" },
   ];
-
-  const options = { keys: ['title', 'author'] };
+  
+  let formatted = [];
 </script>
 
-<Fuzzy {query} {data} {options} />
+<Fuzzy {query} {data} {options} bind:formatted />
+
+{#each formatted as item}
+  {#each item as line}
+    <li>
+      {#each line as { matches, text }}
+        {#if matches}<mark>{text}</mark>{:else}{text}{/if}
+      {/each}
+    </li>
+  {/each}
+{/each}
 ```
-
-## API
-
-| Prop name | Value                                |
-| --------- | ------------------------------------ |
-| query     | `string` (default: `""`)             |
-| data      | `Array` (default: `[]`)              |
-| options   | `object` (default: `{}`)             |
-| focusable | `boolean` (default: `false`)         |
-| class     | `string` (default: `"svelte-fuzzy"`) |
-| style     | `string` (default: `undefined`)      |
-
-## [Examples](examples)
 
 ## [Changelog](CHANGELOG.md)
 

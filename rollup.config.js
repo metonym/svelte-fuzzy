@@ -1,27 +1,33 @@
-import { terser } from 'rollup-plugin-terser';
-import commonjs from 'rollup-plugin-commonjs';
-import pkg from './package.json';
-import resolve from 'rollup-plugin-node-resolve';
-import svelte from 'rollup-plugin-svelte';
-import typescript from 'rollup-plugin-typescript';
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs"
+import svelte from "rollup-plugin-svelte";
+import svelteReadme from "svelte-readme";
+import pkg from "./package.json";
 
-export default ['es', 'umd'].map(format => {
-  const UMD = format === 'umd';
+const DEV = process.env.ROLLUP_WATCH;
+const BUNDLE = process.env.BUNDLE === "true";
 
-  const output = {
-    format,
-    globals: { 'fuse.js': 'Fuse', 'format-fuse.js': 'format' },
-    file: UMD ? pkg.main : pkg.module
-  };
+export default () => {
+  if (!BUNDLE) {
+    return svelteReadme({
+      svelte: { dev: DEV, immutable: true },
+      minify: !DEV,
+      prefixUrl: `${pkg.homepage}/tree/master/`,
+      plugins: [commonjs()]
+    });
+  } 
 
-  if (UMD) {
-    output.name = 'svelte-fuzzy';
-  }
+  return ["es", "umd"].map((format) => {
+    const UMD = format === "umd";
 
-  return {
-    input: pkg.svelte,
-    output,
-    external: Object.keys(pkg.dependencies),
-    plugins: [svelte(), resolve(), commonjs(), typescript(), UMD && terser()]
-  };
-});
+    return {
+      input: pkg.svelte,
+      output: {
+        format,
+        file: UMD ? pkg.main : pkg.module,
+        name: UMD ? pkg.name : undefined,
+      },
+      plugins: [svelte(), resolve(), commonjs()],
+    };
+  });
+};

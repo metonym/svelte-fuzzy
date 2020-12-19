@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`query "old" 1`] = `"<div><div class=\\"svelte-fuzzy\\"><div class=\\"svelte-fuzzy-field\\"><span class=\\"svelte-fuzzy-title\\"><mark>Old</mark></span><span class=\\"svelte-fuzzy-title\\"> Man's War</span></div><div class=\\"svelte-fuzzy-field\\"><span class=\\"svelte-fuzzy-author\\">John</span></div> </div></div>"`;
-
-exports[`query "remy" 1`] = `"<div><div class=\\"svelte-fuzzy\\"><div class=\\"svelte-fuzzy-field\\"><span class=\\"svelte-fuzzy-title\\"><mark>Remy</mark></span></div><div class=\\"svelte-fuzzy-field\\"><span class=\\"svelte-fuzzy-author\\"><mark>Remy</mark></span></div> </div></div>"`;
