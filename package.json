@@ -1,6 +1,6 @@
 {
   "name": "svelte-fuzzy",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Lightweight Svelte fuzzy search highlighting using fuse.js",
   "author": "Eric Liu (https://github.com/metonym)",

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0](https://github.com/metonym/svelte-fuzzy/tree/v1.0.0) - 2020-12-18
+
+- export `result`, `formatted` props
+- remove all markup
+- re-instantiate Fuse if `options` changes
+- add TypeScript definitions
+
 ## [0.3.0](https://github.com/metonym/svelte-fuzzy/tree/v0.3.0) - 2020-03-06
 
 - Add formatted results in `formatted` for easier iteration, especially when searching multiple keys
