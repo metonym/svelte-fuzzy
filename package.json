@@ -2,18 +2,18 @@
   "name": "svelte-fuzzy",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "Lightweight Svelte fuzzy search highlighting using fuse.js",
+  "description": "Fuse.js binding for fuzzy text match highlighting.",
   "author": "Eric Liu (https://github.com/metonym)",
   "svelte": "./src/index.js",
   "module": "./lib/index.mjs",
   "main": "./lib/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "svelte-check": "svelte-check",
     "dev": "rollup -cw",
     "predeploy": "rollup -c",
     "deploy": "npx gh-pages -d dist",
-    "prepack": "BUNDLE=true rollup -c"
+    "prepack": "BUNDLE=true rollup -c",
+    "svelte-check": "svelte-check"
   },
   "dependencies": {
     "format-fuse.js": "^1.0.2",
@@ -21,14 +21,9 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "^11.0.0",
-    "@tsconfig/svelte": "^1.0.10",
-    "rollup": "^2.34.1",
-    "rollup-plugin-svelte": "^7.0.0",
-    "svelte": "^3.31.0",
-    "svelte-check": "^1.1.19",
-    "svelte-readme": "^1.1.0",
-    "typescript": "^4.1.2"
+    "svelte": "^3.31.2",
+    "svelte-check": "^1.1.24",
+    "svelte-readme": "^2.2.0"
   },
   "repository": {
     "type": "git",
@@ -42,6 +37,7 @@
     "fuzzy",
     "fuse.js",
     "highlight",
+    "match",
     "text highlighting"
   ],
   "files": [

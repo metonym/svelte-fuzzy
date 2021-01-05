@@ -1,7 +1,9 @@
 /// <reference types="svelte" />
 import { SvelteComponentTyped } from "svelte";
 
-export type FormattedResult = Array<{ text: string; matches: boolean; key: string }[][]>;
+export type FormattedResult = Array<
+  { text: string; matches: boolean; key: string }[][]
+>;
 
 export interface FuzzyProps {
   /**
@@ -26,7 +28,9 @@ export interface FuzzyProps {
    * Raw Fuse.js search result
    * @default []
    */
-  result?: Array<{ [key: string]: string | Array<{ text: string; matches: boolean }> }>;
+  result?: Array<{
+    [key: string]: string | Array<{ text: string; matches: boolean }>;
+  }>;
 
   /**
    * Formatted Fuse.js results for easier syntax highlighting
