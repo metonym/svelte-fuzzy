@@ -13,7 +13,7 @@
     "predeploy": "rollup -c",
     "deploy": "npx gh-pages -d dist",
     "prepack": "BUNDLE=true rollup -c",
-    "svelte-check": "svelte-check"
+    "test": "svelte-check"
   },
   "dependencies": {
     "format-fuse.js": "^1.0.2",
@@ -22,8 +22,8 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
     "svelte": "^3.35.0",
-    "svelte-check": "^1.2.3",
-    "svelte-readme": "^3.0.0"
+    "svelte-check": "^1.2.6",
+    "svelte-readme": "^3.1.0"
   },
   "repository": {
     "type": "git",
