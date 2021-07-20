@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Fuzzy from "./types";
-  import type { FormattedResult } from "./types/Fuzzy";
+  import Fuzzy from "../types";
+  import type { FormattedResult } from "../types/Fuzzy";
 
   let query = "old";
 
