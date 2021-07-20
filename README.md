@@ -10,17 +10,22 @@
 
 <!-- TOC -->
 
-## Install
+## Installation
+
+**Yarn**
 
 ```bash
 yarn add -D svelte-fuzzy
-# OR
+```
+
+**NPM**
+
+```bash
 npm i -D svelte-fuzzy
 ```
 
 ## Usage
 
-<!-- prettier-ignore-start -->
 ```svelte
 <script>
   import Fuzzy from "svelte-fuzzy";
@@ -32,22 +37,28 @@ npm i -D svelte-fuzzy
 
   // Fuse.js data
   let data = [
-    { title: "Frankenstein; Or, The Modern Prometheus", author: "Mary Wollstonecraft Shelley" },
-    { title: "A Christmas Carol in Prose; Being a Ghost Story of Christmas", author: "Charles Dickens" },
+    {
+      title: "Frankenstein; Or, The Modern Prometheus",
+      author: "Mary Wollstonecraft Shelley",
+    },
+    {
+      title: "A Christmas Carol in Prose; Being a Ghost Story of Christmas",
+      author: "Charles Dickens",
+    },
     { title: "Pride and Prejudice", author: "Jane Austen" },
     { title: "The Scarlet Letter", author: "Nathaniel Hawthorne" },
-    { title: "Alice's Adventures in Wonderland", author: "Lewis Carroll" }
+    { title: "Alice's Adventures in Wonderland", author: "Lewis Carroll" },
   ];
 
   let formatted = [];
 </script>
 
-<input type="text" bind:value={query} />
+<input bind:value={query} />
 
 <br />
 
-<button type="button" on:click={() => query = 'carol'}>Set query to "carol"</button>
-<button type="button" on:click={() => query = ''}>Clear</button>
+<button on:click={() => (query = "carol")}>Search "carol"</button>
+<button on:click={() => (query = "")}>Clear</button>
 
 <Fuzzy {query} {data} {options} bind:formatted />
 
@@ -65,7 +76,6 @@ npm i -D svelte-fuzzy
   {/each}
 {/each}
 ```
-<!-- prettier-ignore-end -->
 
 ## API
 
