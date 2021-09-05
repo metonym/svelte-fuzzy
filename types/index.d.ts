@@ -1,1 +1,1 @@
-export { default as default } from "./Fuzzy";
+export { default as default } from "./Fuzzy.svelte";

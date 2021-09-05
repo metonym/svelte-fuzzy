@@ -1,6 +1,6 @@
 <script lang="ts">
   import Fuzzy from "../types";
-  import type { FormattedResult } from "../types/Fuzzy";
+  import type { FormattedResult } from "../types/Fuzzy.svelte";
 
   let query = "old";
 
@@ -17,6 +17,7 @@
   let formatted: FormattedResult = [];
 </script>
 
+<!-- svelte-ignore missing-declaration -->
 <Fuzzy {query} {data} {options} bind:formatted />
 
 {#each formatted as item}

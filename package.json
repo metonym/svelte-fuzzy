@@ -13,7 +13,7 @@
     "predeploy": "rollup -c",
     "deploy": "npx gh-pages -d dist",
     "prepack": "BUNDLE=true rollup -c",
-    "test": "svelte-check"
+    "test": "svelte-check --workspace test"
   },
   "dependencies": {
     "format-fuse.js": "^1.0.2",
