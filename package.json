@@ -17,13 +17,13 @@
   },
   "dependencies": {
     "format-fuse.js": "^1.0.2",
-    "fuse.js": "^3.4.5"
+    "fuse.js": "^3.6.1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^19.0.1",
-    "svelte": "^3.38.3",
-    "svelte-check": "^2.2.3",
-    "svelte-readme": "^3.2.0"
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "svelte": "^3.42.4",
+    "svelte-check": "^2.2.5",
+    "svelte-readme": "^3.3.1"
   },
   "repository": {
     "type": "git",
