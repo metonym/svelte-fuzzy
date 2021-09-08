@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Fuzzy from "../types";
+import Fuzzy, { Highlighter } from "../types";
   import type { FormattedResult } from "../types/Fuzzy.svelte";
 
   let query = "old";
@@ -23,6 +23,7 @@
 {#each formatted as item}
   {#each item as line}
     <li>
+      <Highlighter {line} />
       {#each line as { matches, text }}
         {#if matches}<mark>{text}</mark>{:else}{text}{/if}
       {/each}

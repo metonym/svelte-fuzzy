@@ -77,29 +77,49 @@ npm i -D svelte-fuzzy
 {/each}
 ```
 
+### `Highlighter`
+
+You can use the `Highlighter` component for fuzzy text highlighting. Matching characters are wrapped in a `mark` element.
+
+```svelte
+<script>
+  import { Highlighter } from "svelte-fuzzy";
+</script>
+
+{#each formatted as item}
+  {#each item as line}
+    <li>
+      <Highlighter {line} />
+    </li>
+  {/each}
+{/each}
+```
+
 ## API
 
 ### Props
 
-| Prop name | Value                                                                                                           |
-| :-------- | :-------------------------------------------------------------------------------------------------------------- |
-| query     | `string` (default: `""`)                                                                                        |
-| data      | [FuzzyData](https://github.com/metonym/svelte-fuzzy/blob/master/types/Fuzzy.d.ts#L19) (default: `[]`)           |
-| options   | [FuzzyOptions](https://github.com/metonym/svelte-fuzzy/blob/master/types/Fuzzy.d.ts#L25)                        |
-| result    | [FuzzyResult](https://github.com/metonym/svelte-fuzzy/blob/master/types/Fuzzy.d.ts#L31) (default: `[]`)         |
-| formatted | [FuzzyFormattedResult](https://github.com/metonym/svelte-fuzzy/blob/master/types/Fuzzy.d.ts#L4) (default: `[]`) |
+#### `Fuzzy`
 
-### Dispatched Events
+| Prop name | Value                                                                                                                  |
+| :-------- | :--------------------------------------------------------------------------------------------------------------------- |
+| query     | `string` (default: `""`)                                                                                               |
+| data      | [FuzzyData](https://github.com/metonym/svelte-fuzzy/blob/master/types/Fuzzy.svelte.d.ts#L19) (default: `[]`)           |
+| options   | [FuzzyOptions](https://github.com/metonym/svelte-fuzzy/blob/master/types/Fuzzy.svelte.d.ts#L25)                        |
+| result    | [FuzzyResult](https://github.com/metonym/svelte-fuzzy/blob/master/types/Fuzzy.svelte.d.ts#L31) (default: `[]`)         |
+| formatted | [FuzzyFormattedResult](https://github.com/metonym/svelte-fuzzy/blob/master/types/Fuzzy.svelte.d.ts#L4) (default: `[]`) |
 
-None.
+#### `Highlighter`
 
-### Forwarded Events
-
-None.
+| Prop name | Value                                                                                                                   |
+| :-------- | :---------------------------------------------------------------------------------------------------------------------- |
+| line      | [HighlighterLine](https://github.com/metonym/svelte-fuzzy/blob/master/types/Highlighter.svelte.d.ts#L4) (default: `[]`) |
 
 ## TypeScript
 
 Svelte version 3.31 or greater is required to use this component with TypeScript.
+
+TypeScript definitions are located in the [types folder](./types).
 
 ## Changelog
 
