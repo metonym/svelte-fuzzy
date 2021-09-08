@@ -23,6 +23,7 @@ import Fuzzy, { Highlighter } from "../types";
 {#each formatted as item}
   {#each item as line}
     <li>
+      <!-- svelte-ignore missing-declaration -->
       <Highlighter {line} />
       {#each line as { matches, text }}
         {#if matches}<mark>{text}</mark>{:else}{text}{/if}
